@@ -1,0 +1,19 @@
+{
+  "name": "dialogflow-library-people",
+  "version": "1.0.0",
+  "description": "dialogflow library people services",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZenobiaZhang/DialogFlow-Library-People.git"
+  },
+  "author": "Yuying Zhang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ZenobiaZhang/DialogFlow-Library-People/issues"
+  },
+  "homepage": "https://github.com/ZenobiaZhang/DialogFlow-Library-People#readme"
+}
