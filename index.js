@@ -11,8 +11,9 @@
 function test(agent, requestBody, url) {
     return rp.get(url).then(jsonBody =>{
         var body = JSON.parse(jsonBody);
-        console.log(body);
+        //console.log(body);
         var what_they_ask = requestBody.queryResult.parameters.people_service;
+        console.log(what_they_ask);
         var talent = requestBody.queryResult.parameters.jobtitle;
         for (var i=0; i<body.length; i++) {
             if (body[i].jobTitle == talent) {
@@ -20,12 +21,12 @@ function test(agent, requestBody, url) {
                     result = "Name: " + body[i].displayName + "\n";
                     result += "Email: "+body[i].email+"\n";
                     result += "About: "+body[i].body+"\n"; 
-                    agent.add(result)
+                    agent.add(result);
                 }
                 if (what_they_ask == "where") {
                     result = "Name: "+body[i].displayName+"\n";
                     result += "Location: "+body[i].officeLocation+"\n";
-                    agent.add(result)
+                    agent.add(result);
                 }
             }
         }
