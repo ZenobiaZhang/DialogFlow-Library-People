@@ -11,7 +11,7 @@
 function test(agent, requestBody, url) {
     return rp.get(url).then(jsonBody =>{
         var body = JSON.parse(jsonBody);
-        //console.log(body);
+        console.log(body);
         var what_they_ask = requestBody.queryResult.parameters.people_service;
         console.log(what_they_ask);
         var talent = requestBody.queryResult.parameters.jobtitle.replace(/ /g, '+');
