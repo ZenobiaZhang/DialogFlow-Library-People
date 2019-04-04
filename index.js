@@ -14,7 +14,7 @@ function test(agent, requestBody, url) {
         //console.log(body);
         var what_they_ask = requestBody.queryResult.parameters.people_service;
         console.log(what_they_ask);
-        var talent = requestBody.queryResult.parameters.jobtitle;
+        var talent = requestBody.queryResult.parameters.jobtitle.replace(/ /g, '+');
         for (var i=0; i<body.length; i++) {
             if (body[i].jobTitle == talent) {
                 if (what_they_ask == "who") {
