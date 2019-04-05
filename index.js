@@ -8,6 +8,7 @@
 //         var docArray = body.response.docs;
 //     });
 // }
+const rp = require('request-promise-native');
 function test(agent, requestBody, url) {
     return rp.get(url).then(jsonBody =>{
         var body = JSON.parse(jsonBody);
