@@ -12,7 +12,7 @@
 const rp = require('request-promise-native');
 function test(agent, requestBody, url) {
 var hk = {
-        url = 'https://api.devhub.virginia.edu/v1/library/people/';
+        url: 'https://api.devhub.virginia.edu/v1/library/people/',
         headers: { 'User-Agent': 'Request-Promise'},JSON: true;
 };
 return rp(hk).then(function (people) {
