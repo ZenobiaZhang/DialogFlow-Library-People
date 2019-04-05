@@ -8,6 +8,21 @@
 //         var docArray = body.response.docs;
 //     });
 // }
+/*
+const rp = require('request-promise-native');
+function test(agent, requestBody, url) {
+var final = "";
+var hk = {
+        url = '';
+        headers: { 'User-Agent': 'Request-Promise'},JSON: true;
+};
+return rp(hk).then(function (people) {
+        services = JSON.parse(people);
+        var what_they_ask = requestBody.queryResult.parameters.people_service;
+        return Promise.resolve(agent);
+});
+}
+**/
 const rp = require('request-promise-native');
 function test(agent, requestBody, url) {
     return rp.get(url).then(jsonBody =>{
@@ -15,7 +30,7 @@ function test(agent, requestBody, url) {
         console.log(body);
         var what_they_ask = requestBody.queryResult.parameters.people_service;
         console.log(what_they_ask);
-        var talent = requestBody.queryResult.parameters.jobtitle.replace(/ /g, '+');
+        var talent = requestBody.queryResult.parameters.jobtitle;
         for (var i=0; i<body.length; i++) {
             if (body[i].jobTitle == talent) {
                 if (what_they_ask == "who") {
